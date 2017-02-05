@@ -1,0 +1,76 @@
+Train Data MSE:
+Optimal k = 50 with mse_min of : 7.7309799593287325
+min_matrix for k 1, 3, 5, 50:
+[9.535948564264952, 9.623122390346127, 9.285774385996598, 7.7309799593287325]
+
+Validation Data MSE
+
+Optimal k = 50
+min_matrix for k 1, 3, 5, 50:
+[6.606854367321185, 6.660917116981031, 6.453588060256919, 5.582469436681228]
+
+
+Test Data MSE
+
+min_k value is:  50 with mse_min of : 1.37334706678
+min_matrix for k 1, 3, 5, 50:
+[1.4772812075625872, 1.4922999476580325, 1.438286988847605, 1.3733470667799226]
+
+
+Comment:
+The designed function has a much higher increasing slope at its tail; so a higher k of 50 would force
+the model to care more nearby points. But this case, most nearby points are ones with lower output values.
+
+Modification:
+Given the density of our training data set, 80 sets of input to 80 sets of outputs, the ideal k should be << 80 so that
+it captures a particular segment info quite well instead of capturing too much of the function portion.
+
+
+Test Data Result
+K = 1 for trainData
+y_expetected:
+[[ 1.00896502]
+ [ 6.04517629]
+ [ 1.32285324]
+ [ 1.76794522]
+ [ 0.73414657]
+ [ 2.09564092]
+ [ 1.49704638]
+ [ 1.27492494]
+ [ 1.86914917]
+ [ 4.00252562]]
+K = 3
+[[ 1.04834212]
+ [ 5.83746763]
+ [ 1.24997729]
+ [ 2.16910089]
+ [ 1.09187248]
+ [ 1.30614199]
+ [ 1.49902918]
+ [ 1.23743069]
+ [ 1.20547488]
+ [ 3.43117965]]
+
+ k = 5
+[[ 1.1523228 ]
+ [ 6.06156853]
+ [ 1.22178772]
+ [ 2.27348558]
+ [ 1.06906259]
+ [ 1.10907105]
+ [ 1.6814588 ]
+ [ 1.34769337]
+ [ 1.32086335]
+ [ 3.30164077]]
+
+ k = 50
+ [[ 1.92760806]
+ [ 5.57260457]
+ [ 1.92760806]
+ [ 3.43800635]
+ [ 1.92760806]
+ [ 1.92760806]
+ [ 2.93311757]
+ [ 1.92760806]
+ [ 1.92760806]
+ [ 3.82766387]]
